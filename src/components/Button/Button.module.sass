@@ -1,0 +1,52 @@
+$blue: #2196F3
+$dark-blue: #1a69aa
+
+.button
+    margin: 0
+    width: 100%
+    padding: 15px 20px
+    background-color: #fff
+    color: #000
+    font-weight: 600
+    font-size: 12px
+    line-height: 20px
+    text-align: center
+    letter-spacing: 0.5px
+    text-transform: uppercase
+    border: none
+    cursor: pointer
+
+.next-button
+    background-color: $blue
+    color: #fff
+    &:active
+        background-color: $dark-blue
+
+@mixin tab-active
+    color: white
+    background-color: $blue
+    border-color: $blue
+    outline: none
+
+.tab
+    width: 100%
+    background-color: #fff
+    border-right: 1px solid #DFE5EC
+    text-transform: uppercase
+    font-size: 12px
+    font-weight: 600
+    color: #4A4A4A
+    cursor: pointer
+    outline: none
+    &:last-child
+        border-top-right-radius: 5px
+        border-bottom-right-radius: 5px
+        border-right: none
+    &:first-child
+        border-top-left-radius: 5px
+        border-bottom-left-radius: 5px
+    &:active
+        @include tab-active
+
+.tab-active
+    @include tab-active
