@@ -15,6 +15,7 @@ function loadingBarRightPosition(
     return `${right}%`;
   }
 
+
   right = 100 - Math.floor((ticketsCount / expectedTicketsCount) * 100);
 
   return `${right}%`;

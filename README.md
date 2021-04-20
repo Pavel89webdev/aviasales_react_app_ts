@@ -5,3 +5,5 @@ This app is made by this testing task:
 https://github.com/KosyanMedia/test-tasks/tree/master/aviasales_frontend
 
 You can look this app at Vercel:
+
+https://aviasales-react-app-ts-pavel89webdev.vercel.app/

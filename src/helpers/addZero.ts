@@ -1,4 +1,4 @@
-function addZero(num: number): string {
+function addZero(num = 0): string {
   if (num < 10) {
     return `0${num}`;
   }

@@ -8,21 +8,14 @@ function getTicketDescription(segment: ITciketSegment): ITicketDescription {
   const durationForwardWay = segment.duration;
   const hoursForwardWay = Math.floor(durationForwardWay / 60);
   const minutesForwardWay = durationForwardWay - hoursForwardWay * 60;
-  const duration = `
-    ${addZero(hoursForwardWay)}ч ${addZero(minutesForwardWay)}м 
-  `;
+  const duration = `${addZero(hoursForwardWay)}ч ${addZero(minutesForwardWay)}м`;
 
   const startDate = new Date(segment.date);
-  const departureTime = `
-    ${addZero(startDate.getUTCHours())}:${addZero(startDate.getUTCMinutes())}
-  `;
+  const departureTime = `${addZero(startDate.getUTCHours())}:${addZero(startDate.getUTCMinutes())}`;
   const arraivalTimeData = new Date(
     +Date.parse(startDate.toString()) + durationForwardWay * 60 * 1000
   );
-  const arraivalTime = `
-    ${addZero(arraivalTimeData.getUTCHours())}:${addZero(
-    arraivalTimeData.getUTCMinutes()
-  )}`;
+  const arraivalTime = `${addZero(arraivalTimeData.getUTCHours())}:${addZero(arraivalTimeData.getUTCMinutes())}`;
 
   const { stops } = segment;
   const renderStops = stops.join(', ');
